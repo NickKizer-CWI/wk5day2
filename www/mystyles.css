@@ -1,0 +1,36 @@
+@charset "utf-8";
+/* Sets the size of the logo img and makes it round */
+#rpsLogo {
+	height: 60%;
+	width: 60%;
+	margin-left: 20%;
+	border-radius: 50%;
+}
+/* sets the size and aligns the heading text */
+#rpsHeading {
+	text-align: center;
+	font-size: 3em;	
+}
+/* sets the size of the heading text for added style */
+#rpsLower {
+	font-size: .5em;	
+}
+/* sets the size of the img on about us page */
+#aboutPhoto {
+	height: 100%;
+	width: 98%;
+		
+}
+/* sets the size, position, and makes the profile images round */
+#empActive {
+	height: 40%;
+	width: 40%;	
+	padding-right: 2%;
+	border-radius: 50%;
+}
+/* sets the style, size, and position of the contact information */
+#contact {
+	text-align: left;
+	font-size: 1.5em;	
+	margin-left: 25%;
+}

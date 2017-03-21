@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
+    <title>Vecta Corp. Mobile</title>
+   <!-- <link rel="stylesheet" href="themes/RusticPearSalon.css" />
+  	<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />-->
+    <link rel="stylesheet" type="text/css" href="themes/themes/RusticPearSalon.min.css">
+    <link rel="stylesheet" type="text/css" href="themes/themes/jquery.mobile.icons.min.css">
+   
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">    
+    <link href="styles.css" rel="stylesheet" type="text/css"> 
+    <link href="mystyles.css" rel="stylesheet" type="text/css">   
+    <!-- JavaScript HTML requirements -->
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script> 
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+   <!-- <script>
+    	$(document).ready(function(){
+        	var url = "http://api.twitter.com/1/statuses/user_timeline.json?screen_name=Microsoft&count=20&callback=?";
+        	var tweet = "";
+        
+        	$.getJSON(url, function(data) {		
+            	$.each(data, function(i,item) {
+                	tweet += convertUrlToLink(item.text) + "<br>" + 
+                         	formatTime(item.created_at) + "<br><br>";
+            	});
+            	$("#twitterfeed").html("").append(tweet);
+        	});
+        
+        	function convertUrlToLink(text) {
+            	var exp = /(\b(https?):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/i;
+            	return text.replace(exp,"<br><a href='$1'>$1</a>");  
+        	}
+    
+        	// function to calculate how long ago the tweet was posted
+			function formatTime(tweetDateTime) {
+				var tweetDate = new Date(tweetDateTime);
+				var tweetTime = tweetDate.getTime();
+				var currentTime = new Date().getTime()
+				var timeago = parseInt((currentTime - tweetTime) / 1000);
+			
+				if 		(timeago < (1*60)) 		return "less than a minute ago";
+				else if	(timeago < (2*60)) 		return "about a minute ago";
+				else if	(timeago < (45*60)) 	return (parseInt(timeago / 60)).toString() + " minutes ago";
+				else if	(timeago < (90*60)) 	return "about an hour ago";
+				else if	(timeago < (24*60*60)) 	return "about " + (parseInt(timeago / 3600)).toString() + " hours ago";
+				else if	(timeago < (48*60*60)) 	return "1 day ago";
+				else 							return (parseInt(timeago / 86400)).toString() + " days ago";
+			}
+    	});
+    </script>-->
+</head>
+
+<body>
+	<!-- HOME -->
+	<div data-role="page" id="home" data-theme="f">
+    	<header data-role="header">
+        	<h1>Rustic Pear Salon</h1>
+        	<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home" data-theme="f" class="ui-btn-active" data-transition="slide">Home</a></li>
+					<li><a href="#aboutus" data-icon="info" data-theme="f" data-transition="slide">About Us</a></li>
+            		<li><a href="#contactus" data-icon="grid" data-theme="f" data-transition="slide">Contact Us</a></li>
+				</ul>
+			</div>
+    	</header>
+    
+    	<section data-role="content">
+        	<img src="images/logo.jpg" id="rpsLogo" alt="Rustic Pear Salon" />
+			<h2 id="rpsHeading">Welcome <span id="rpsLower"><br>to the</span><br> Rustic Pear Salon</h2>
+	    	<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+	    	<ul>
+	    		<li>Lorem ipsum dolor sit amet, consetetur sadipscing </li>
+	    		<li>Lorem ipsum dolor , consetetur elitr</li>
+	    		<li>Loremdolor sit amet, consetetur </li>
+	    	</ul>
+	    	<p>To learn more about us, go to <a href="#aboutus">About Us</a>.</p>
+	    
+	    	<h3>What our clients say</h3>
+	    	<q>Throughout the years we have visited the Rustic Pear Salon, I have always been amazed at their level of dedication and professionalism.</q>
+	    	<cite>Tina Wilkers</cite>
+	    	<q>Incredible results from an incredible effort by the Rustic Pear Salon team! I am very pleased with the styles they've introduced to me.</q>
+	    	<cite>Shari Barnes</cite>
+  		</section>
+    
+    	<footer data-role="footer" class="ui-bar">
+    		<div data-role="controlgroup" data-type="horizontal">
+            	<a href="#twitter" data-rel="dialog" data-role="button" data-icon="info">Recent Tweets</a>
+        	</div>
+    	</footer>
+	</div>
+
+	<!-- SOLUTIONS -->
+	<div data-role="page" id="aboutus">
+    	<header data-role="header">
+        	<h1>Rustic Pear Salon</h1>
+        	<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home" data-theme="f" data-transition="slide">Home</a></li>
+					<li><a href="#aboutus" data-icon="info" class="ui-btn-active" data-theme="f" data-transition="slide">About Us</a></li>
+            		<li><a href="#contactus" data-icon="grid" data-theme="f" data-transition="slide">Contact Us</a></li>
+				</ul>
+			</div>
+    	</header>
+    
+    	<section data-role="content">
+    		<div class="content-primary">
+            	<img src="images/groupPhoto.jpg" id="aboutPhoto" alt="Group Photo" />	
+        		<ul data-role="listview">
+        			<li>
+            			<a href="#vprospect">
+            				<img src="images/emp1.jpg" alt="Courtney K. Beams">
+            				<h3>Courtney K. Beams</h3>
+            			</a>
+        			</li>
+        			<li>
+            			<a href="#vconvert">
+            				<img src="images/emp2.jpg" alt="Valaree Potts">
+            				<h3>Valaree Potts</h3>
+            			</a>
+        			</li>
+        			<li>
+            			<a href="#vretain">
+            				<img src="images/emp3.jpg" alt="Lexi Bernhisel Hicks">
+            				<h3>Lexi Bernhisel Hicks</h3>
+            			</a>
+        			</li>
+        		</ul>
+    		</div>
+    	</section>
+    
+    	<footer data-role="footer" class="ui-bar">
+    		<div data-role="controlgroup" data-type="horizontal">
+            	<a href="#twitter" data-rel="dialog" data-role="button" data-icon="info">Recent Tweets</a>
+        	</div>
+    	</footer>
+	</div>
+
+	<!-- SOLUTIONS : VPROSPECT -->
+	<div data-role="page" id="vprospect">
+    	<header data-role="header">
+    		<a href="#" data-role="button" data-icon="arrow-l" data-rel="back" data-transition="slide">Back</a>
+        	<h1>Rustic Pear Salon</h1>
+    	</header>
+    
+    	<section data-role="content">
+    		<img src="images/emp1.jpg" id="empActive" alt="Courtney K. Beams">
+    		<h2>Courtney K. Beams</h2>
+			<h3>About Me</h3>
+			<p>I attended Master Educators Beauty School and has been working in the Beauty Industry for 2 1/2 years. I am a perfectionist and cares about the services I provide for my clients. Services that I offer are Nails, Haircuts and fun Hair Colors!! My husband and I have an adorable baby girl who is 10 months old, I love being a mother and taking care of my family!</p>
+  		</section>
+	</div>
+
+	<!-- SOLUTIONS : VCONVERT -->
+	<div data-role="page" id="vconvert">
+    	<header data-role="header">
+    		<a href="#" data-role="button" data-icon="arrow-l" data-rel="back" data-transition="slide">Back</a>
+        	<h1>Rustic Pear Salon</h1>
+    	</header>
+    
+    	<section data-role="content">
+    		<img src="images/emp2.jpg" id="empActive" alt="Valaree Potts">
+    		<h2>Valaree Potts</h2>
+			<h3>About Me</h3>
+			<p>I absolutely love working at the Rustic Pear Salon!!! I love being around everyone! I cares about my clients and always try to provide exactly what they want. I bring eight years of experience to the BEAUTY INDUSTRY and have had EXTENSIVE training as an Esthetician! If it's skin care that you are looking for I'm your girl! I loves to stay busy at the salon and am the proud momma of a sweet little boy, and a new baby girl who is expected to arrive soon</p>
+  		</section>
+	</div>
+
+	<!-- SOLUTIONS : VRETAIN -->
+	<div data-role="page" id="vretain">
+    	<header data-role="header">
+    		<a href="#" data-role="button" data-icon="arrow-l" data-rel="back" data-transition="slide">Back</a>
+        	<h1>Rustic Pear Salon</h1>
+    	</header>
+    
+    	<section data-role="content">
+    		<img src="images/emp3.jpg" id="empActive" alt="Lexi Bernhisel Hicks">
+    		<h2>Lexi Bernhisel Hicks</h2>
+			<h3>About Me</h3>
+			<p>I attended Master Educators Beauty school in 2009 and am constantly seeking ways to stay on top of the latest trends and techniques. My talents combined with my experience make me the hairstylist for you. I specialize in dimensional hair color, rocking cuts, and facial waxing. I love to do highlights and low lights and will have everyone talking about how great you look by the time I am finished.</p>
+  		</section>
+	</div>
+
+	<!-- CONTACT US -->
+	<div data-role="page" id="contactus">
+    	<header data-role="header">
+        	<h1>Vecta Corp.</h1>
+        	<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home" data-theme="f" data-transition="slide">Home</a></li>
+					<li><a href="#aboutus" data-icon="info" data-theme="f" data-transition="slide">About Us</a></li>
+            		<li><a href="#contactus" data-icon="grid" class="ui-btn-active" data-theme="f" data-transition="slide">Contact Us</a></li>
+				</ul>
+			</div>
+    	</header>
+    
+    	<section data-role="content">
+        	<h3>Contact Us</h3>
+    		<form action="http://vectacorp.com/vc/scripts/mobile.asp" method="post" data-ajax="false">
+            	<label for="name">Name:</label>
+            	<input type="text" name="name" id="name">
+            	<label for="phone">Phone:</label>
+            	<input type="tel" name="phone" id="phone">
+            	<label for="email">Email:</label>
+            	<input type="email" name="email" id="email">
+ 				<label for="questions">Questions/Comments:</label>
+            	<textarea name="questions" id="questions"></textarea>
+            	<br>
+            	<input type="submit" value="Submit Form">
+        	</form>
+            <p id="contact">Phone:<br>(208)-733-5377</p>
+            <p id="contact">Address:<br>222 Main Ave. N Twin Falls, ID</p>
+            <p id="contact">Facebook:<br>www.facebook.com/RusticPearSalon/</p>
+    	</section>
+    
+    	<footer data-role="footer" class="ui-bar">
+    		<div data-role="controlgroup" data-type="horizontal">
+            	<a href="#twitter" data-rel="dialog" data-role="button" data-icon="info">Recent Tweets</a>
+        	</div>
+    	</footer>
+	</div>
+
+	<!-- RECENT TWEETS -->
+	<div data-role="page" id="twitter">
+    	<header data-role="header">
+        	<h1>Recent Tweets</h1>
+    	</header>
+    
+    	<section data-role="content">
+			<div id="twitterfeed"></div>
+    	</section>
+	</div>
+
+</body>
+</html>
